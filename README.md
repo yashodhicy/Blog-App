@@ -6,35 +6,38 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 [Ruby and Rails Project - Blog App] <a name="about-project"></a>
+# 📖 [Ruby and Rails Project - Blog App] 
+<a name="about-project"></a>
 
 **[Description]**
 
 The Blog app be a classic example of a blog website. I will create a functional website that will show the list of posts and users can add comments and likes. 
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With 
+<a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
+### Tech Stack 
+<a name="tech-stack"></a>
 
 - Ruby
 - Rails
 
-### Key Features <a name="key-features"></a>
+### Key Features 
+<a name="key-features"></a>
 
 The application provides a variety of features including:
 
@@ -46,9 +49,6 @@ The application provides a variety of features including:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link] Coming soon(#)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,6 +89,12 @@ rails server
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Run Tests 
+<a name="Run-tests"></a>
+  go to the blog-app directory
+  run below command in the command line 
+    rspec spec
+
 ## 👥 Authors <a name="authors"></a>
 
 👤 : **Yashodhi Chathurangi**
@@ -96,6 +102,12 @@ rails server
 - GitHub: [@githubhandle](https://github.com/yashodhicy)
 - Twitter: [@twitterhandle](https://twitter.com/Yashichathucy)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/yashodhichathurangi/)
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- add more features
+- add good UI
+- add full flow
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -1,4 +1,3 @@
-<h1>Here is a list of users</h1>
 <%"No users" if @user.empty?%>
 <% @user.each do |user| %>
     <a href="<%= user_path(user) %>"><%= render user%></a>

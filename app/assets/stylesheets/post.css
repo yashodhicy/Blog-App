@@ -1,0 +1,15 @@
+#post,
+.comments {
+  border: 0.2rem solid var(--purple);
+  margin-top: 2rem;
+}
+
+#comments-likes {
+  text-align: end;
+  padding-right: 1rem;
+}
+
+#view-post {
+  text-decoration: underline;
+  color: var(--purple);
+}

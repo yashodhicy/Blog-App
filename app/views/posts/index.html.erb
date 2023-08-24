@@ -1,4 +1,14 @@
 <%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
+<nav class="nav">
+    <%= link_to "Add New Post", new_user_post_path(@user.id) %>
+    <%= link_to "Home", root_path %>
+    <%= link_to "Back", :back %>
+</nav>
+<% flash.each do |key, value| %>
+  <div class="flash <%= key %>">
+    <%= value %>
+  </div>
+<% end %>
 <%= render @user%>
 <% @posts.each do |post| %>
     <a href ="<%= user_post_path(@user, post)%>"><%= render post%></a>

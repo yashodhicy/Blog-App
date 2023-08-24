@@ -1,1 +1,17 @@
-<h1>here is the user details</h1>
+<header>
+<%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
+</header>
+<body>
+<%= render @user%>
+<div id="bio">
+ Bio: <%= @user.bio %>
+ </div>
+<br>
+<%='No posts for this user' if (@user.posts.empty?) %>
+<% @user.recent_posts.each do |post| %>
+  <%= render post %>
+<% end %>
+<div class="button-container">
+    <button><a href="<%= user_posts_path(@user) %>">See all posts</a></button>
+</div>
+</body>

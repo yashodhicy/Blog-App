@@ -1,0 +1,60 @@
+:root {
+  --purple: rgb(146, 28, 162);
+  --light_purple: rgb(214, 180, 244);
+}
+
+body {
+  margin: 3rem 2rem;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#user {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+#user-image {
+  min-height: 6rem;
+  min-width: 6rem;
+  border: 0.2rem solid var(--purple);
+}
+
+#user-details {
+  min-height: 6rem;
+  min-width: calc(100% - 9rem);
+  border: 0.2rem solid rgb(146, 28, 162);
+}
+
+#user-details h1 {
+  margin-left: 1rem;
+}
+
+#user-details p {
+  text-align: end;
+  margin-right: 1rem;
+}
+
+#bio {
+  min-height: 6rem;
+  border: 0.2rem solid var(--purple);
+  margin-top: 2rem;
+}
+
+.button-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: var(--light_purple);
+  min-height: 2rem;
+  border: 0.2rem solid var(--purple);
+  border-radius: 5px;
+}

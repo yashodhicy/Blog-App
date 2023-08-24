@@ -1,0 +1,12 @@
+<header>
+<%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
+</header>
+<body>
+<div id="user"> 
+  <img id="user-image" src="<%= user.photo %>" alt="User Photo">
+  <article id="user-details">
+    <h1><%= user.name %></h1>
+    <p>Number of posts: <%= user.posts_counter.nil? ? 0 : user.posts_counter %></p>
+  <article>
+</div>
+</body>

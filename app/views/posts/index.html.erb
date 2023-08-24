@@ -1,1 +1,12 @@
 <h1>Here is a list of posts</h1>
+<%= render @user%>
+<% @posts.each do |post| %>
+    <a href ="<%= user_post_path(@user, post)%>"><%= render post%></a>
+    <%= "no comments for this post" if post.comments.empty?%>
+    <% post.recent_comments.each do |comment|%>
+        <%=render comment%>
+    <% end %>
+    <p><%= link_to 'View Post', user_post_path(@user, post) %></p>
+<% end %>
+
+<%= will_paginate @posts %>

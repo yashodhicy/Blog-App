@@ -1,0 +1,6 @@
+<div>
+post: <%= post.id %><br>
+    <%= post.text %><br>
+comments: <%= post.comments_counter? ? post.comments_counter : 0 %> , 
+Likes: <%= post.likes_counter? ? post.likes_counter : 0 %>
+</div>

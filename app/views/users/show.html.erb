@@ -1,1 +1,10 @@
 <h1>here is the user details</h1>
+
+    <%= render @user%>
+    Bio: <%= @user.bio %><br>
+    <br>
+    <%='No posts for this user' if (@user.posts.empty?) %>
+    <% @user.recent_posts.each do |post| %>
+        <%= render post %>
+    <% end %>
+    <button><a href="<%= user_posts_path(@user) %>">See all post</button>

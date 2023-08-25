@@ -17,4 +17,10 @@
 <% end %>
 </div>
 
-<div><%= render "comments/create" %> </div>
+<div><%= render "comments/create" %> 
+
+<%if Like.where(user_id: User.first.id, post_id: @post.id).exists?%>
+ <p id= "liked">Liked<p>
+<%else%>
+<%= render "likes/create" %></div>
+<%end%>

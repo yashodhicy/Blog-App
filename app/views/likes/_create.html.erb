@@ -1,0 +1,6 @@
+<%= form_with model: [@post, @like], url: post_likes_path(@post), class: "form", scope: :like do  |f| %>
+<%f.submit "like", class: "submit_button"%>
+<%end%>
+
+
+

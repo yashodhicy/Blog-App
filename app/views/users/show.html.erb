@@ -15,6 +15,7 @@
 <br>
 <%='No posts for this user' if (@user.posts.empty?) %>
 <% @user.recent_posts.each do |post| %>
+   <a href ="<%= user_post_path(@user, post)%>">
   <%= render post %>
 <% end %>
 <div class="button-container">

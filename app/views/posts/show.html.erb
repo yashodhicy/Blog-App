@@ -1,5 +1,10 @@
 <%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= stylesheet_link_tag 'post', media: 'all', 'data-turbolinks-track': 'reload' %>
+<% flash.each do |key, value| %>
+  <div class="flash <%= key %>">
+    <%= value %>
+  </div>
+<% end %>
 <nav class="nav">
     <%= link_to "Home", root_path %>
     <%= link_to "Back", :back %>
@@ -11,3 +16,5 @@
         <%=render comment %>
 <% end %>
 </div>
+
+<div><%= render "comments/create" %> </div>

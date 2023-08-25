@@ -1,5 +1,4 @@
 <%= form_with model: [@user, @post, @comment], class: "form", scope: :comment do |f| %>
-  <h2 class="form_title">Add a Comment</h2>
   <section class="form-section">
     <%= f.text_area :text,
     placeholder: "Write a comment...", 

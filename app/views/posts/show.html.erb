@@ -1,5 +1,8 @@
 <%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= stylesheet_link_tag 'post', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<body>
 <% flash.each do |key, value| %>
   <div class="flash <%= key %>">
     <%= value %>
@@ -17,10 +20,11 @@
 <% end %>
 </div>
 
-<div><%= render "comments/create" %> 
+<div class="like-comment"><%= render "comments/create" %> 
 
 <%if Like.where(user_id: User.first.id, post_id: @post.id).exists?%>
  <p id= "liked">Liked<p>
 <%else%>
 <%= render "likes/create" %></div>
 <%end%>
+</body>

@@ -1,15 +1,29 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+:root {
+  --purple: rgb(146, 28, 162);
+  --light_purple: rgb(214, 180, 244);
+  --dark_purple: rgb(42, 1, 81);
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  top: 1px;
+  background-color: rgb(207, 162, 249);
+  width: calc(100% - 6rem);
+  height: 2rem;
+  padding: 0 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  color: var(--dark_purple);
+}
+
+button,
+.submit_button {
+  background-color: var(--light_purple);
+  min-height: 2rem;
+  border: 0.2rem solid var(--purple);
+  border-radius: 5px;
+}

@@ -13,3 +13,31 @@
   text-decoration: underline;
   color: var(--purple);
 }
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.like-comment {
+  display: flex;
+  justify-content: space-around;
+}
+
+.submit_button {
+  min-width: 4rem;
+}
+
+#liked {
+  display: flex;
+  background-color: rgb(183, 140, 183);
+  border-radius: 5px;
+  padding: 0;
+  height: 2rem;
+  min-width: 4rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}

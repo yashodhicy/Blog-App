@@ -7,7 +7,7 @@ class LikesController < ApplicationController
     respond_to do |format|
       format.html do
         if @like.save
-          redirect_to user_post_path(current_user, @post), notice: 'you liked the post' 
+          redirect_to user_post_path(current_user, @post), notice: 'you liked the post'
         else
           redirect_to user_post_path(current_user, @post), alert: 'unable to like'
         end

@@ -1,10 +1,9 @@
 class UsersController < ActionController::Base
   def index
-    @user = User.all
+    @users = User.all.order(id: :asc)
   end
 
   def show
     @user = User.find(params[:id])
-    # @posts = @user.posts
   end
 end

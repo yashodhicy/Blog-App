@@ -1,0 +1,12 @@
+<%= form_with model: [@user, @post, @comment], class: "form", scope: :comment do |f| %>
+  <section class="form-section">
+    <%= f.text_area :text,
+    placeholder: "Write a comment...", 
+    required: true,
+    class: "text_input" %>
+  </section>
+
+  <section class="form-section">
+    <%= f.submit "Comment", class: "submit_button" %>
+  </section>
+<% end %>

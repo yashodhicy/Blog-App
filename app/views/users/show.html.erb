@@ -1,14 +1,21 @@
-<header>
 <%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
-</header>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <body>
+<nav class="nav">
+    <%= link_to "Add New Post", new_user_post_path(@user.id) %>
+    <%= link_to "Home", root_path %>
+    <%= link_to "Back", :back %>
+</nav>
+
 <%= render @user%>
+
 <div id="bio">
  Bio: <%= @user.bio %>
  </div>
 <br>
 <%='No posts for this user' if (@user.posts.empty?) %>
 <% @user.recent_posts.each do |post| %>
+   <a href ="<%= user_post_path(@user, post)%>">
   <%= render post %>
 <% end %>
 <div class="button-container">

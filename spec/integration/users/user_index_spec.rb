@@ -4,7 +4,7 @@ RSpec.describe 'user index view page', type: :system do
   let!(:user1) do
     User.create(
       name: 'test user1',
-      photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+      photo: 'https://images3.alphacoders.com/690/690494.jpg',
       bio: 'test_bio1',
       posts_counter: 1
     )
@@ -28,7 +28,6 @@ RSpec.describe 'user index view page', type: :system do
     )
   end
 
-
   describe 'user content' do
     before(:example) do
       visit users_path
@@ -41,7 +40,7 @@ RSpec.describe 'user index view page', type: :system do
     end
 
     it ' can see profile picture' do
-      expect(page).to have_selector('img#user-image[src="https://unsplash.com/photos/F_-0BxGuVvo"]')
+      expect(page).to have_selector('img#user-image[src="https://images3.alphacoders.com/690/690494.jpg"]')
       expect(page).to have_selector('img#user-image[src="https://images.pexels.com/photos/2913125/pexels-photo-2913125.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"]')
       expect(page).to have_selector('img#user-image[src="https://static.photocdn.pt/images/articles/2018/12/05/articles/2017_8/beginner_photography_mistakes-1.webp"]')
     end

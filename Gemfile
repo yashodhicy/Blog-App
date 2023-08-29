@@ -58,7 +58,7 @@ group :development, :test do
   gem 'capybara'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing'
-  gem 'webdrivers'
+  gem 'webdrivers', '5.3.1'
 end
 
 group :development do
@@ -74,5 +74,6 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'database_cleaner'
   gem 'selenium-webdriver'
 end

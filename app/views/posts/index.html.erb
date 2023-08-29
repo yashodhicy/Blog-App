@@ -15,7 +15,7 @@
     <a href ="<%= user_post_path(@user, post)%>"><%= render post%></a>
     <%= "no comments for this post" if post.comments.empty?%>
     <div class="comments">
-    <% post.recent_comments.each do |comment|%>
+    <% post.recent_comments.includes(:user).each do |comment|%>
         <%=render comment%>
     <% end %>
     </div>
@@ -23,4 +23,3 @@
 <% end %>
 </body>
 <%= will_paginate @posts %>
-

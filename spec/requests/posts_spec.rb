@@ -2,12 +2,14 @@ require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
   describe 'GET /index', type: :request do
-    user = User.create(
-      name: 'test user',
-      photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-      bio: 'test_bio',
-      posts_counter: 1
-    )
+    let!(:user) do
+      User.create(
+        name: 'test user',
+        photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+        bio: 'test_bio',
+        posts_counter: 1
+      )
+    end
 
     before(:example) { get "/users/#{user.id}/posts" }
 
@@ -20,25 +22,29 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('Here is a list of posts')
+      expect(response.body).to include('test user')
     end
   end
 
   describe 'GET /show', type: :request do
-    user = User.create(
-      name: 'test user',
-      photo: 'https://example.com/default-photo.jpg',
-      bio: 'test_bio',
-      posts_counter: 1
-    )
+    let!(:user) do
+      User.create(
+        name: 'test user',
+        photo: 'https://example.com/default-photo.jpg',
+        bio: 'test_bio',
+        posts_counter: 1
+      )
+    end
 
-    post = Post.create(
-      author: user,
-      title: 'Hello',
-      text: 'This is my first post',
-      comments_counter: 1,
-      likes_counter: 1
-    )
+    let!(:post) do
+      Post.create(
+        author: user,
+        title: 'Hello',
+        text: 'This is my first post',
+        comments_counter: 1,
+        likes_counter: 1
+      )
+    end
 
     before(:example) do
       get "/users/#{user.id}/posts/#{post.id}"
@@ -53,7 +59,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('Here is a list of posts for a given user')
+      expect(response.body).to include(post.text)
     end
   end
 end

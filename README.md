@@ -103,6 +103,12 @@ rails server
 - Twitter: [@twitterhandle](https://twitter.com/Yashichathucy)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/yashodhichathurangi/)
 
+👤 : **Sumeya Ibrahim**
+
+- GitHub: [@isume295](https://github.com/isume295/)
+- Twitter: [@isume295](https://twitter.com/isume295)
+- LinkedIn: [@isume295](https://www.linkedin.com/in/sumeya-ibrahim)
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 - add more features

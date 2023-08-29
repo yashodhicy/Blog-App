@@ -1,6 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe 'users', type: :request do
+  let!(:user) do
+    User.create(
+      name: 'test user1',
+      photo: 'https://example.com/default-photo.jpg',
+      bio: 'test_bio',
+      posts_counter: 2
+    )
+  end
+
   describe 'GET /index', type: :request do
     before(:example) { get '/users' }
 
@@ -13,16 +22,18 @@ RSpec.describe 'users', type: :request do
     end
 
     it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('Here is a list of users')
+      expect(response.body).to include('Number of posts: 2')
     end
   end
   describe 'GET /show', type: :request do
-    user = User.create(
-      name: 'test user',
-      photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-      bio: 'test_bio',
-      posts_counter: 1
-    )
+    let!(:user) do
+      User.create(
+        name: 'test user1',
+        photo: 'https://example.com/default-photo.jpg',
+        bio: 'test_bio',
+        posts_counter: 1
+      )
+    end
     before(:example) { get "/users/#{user.id}" }
 
     it 'displays the user details for a given user' do
@@ -34,7 +45,7 @@ RSpec.describe 'users', type: :request do
     end
 
     it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('here is the user details')
+      expect(response.body).to include('test user1')
     end
   end
 end

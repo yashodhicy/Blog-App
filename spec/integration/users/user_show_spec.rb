@@ -10,7 +10,6 @@ RSpec.describe 'user show view page', type: :system do
     )
   end
 
-
   let!(:posts) do
     [
       Post.create(author: user1, title: 'Post 1', text: 'Post 1 content', comments_counter: 1, likes_counter: 1),
@@ -18,7 +17,6 @@ RSpec.describe 'user show view page', type: :system do
       Post.create(author: user1, title: 'Post 3', text: 'Post 3 content', comments_counter: 3, likes_counter: 3)
     ]
   end
-
 
   describe 'show user and post details' do
     before(:example) do

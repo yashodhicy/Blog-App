@@ -30,9 +30,9 @@ RSpec.describe 'post index view page', type: :system do
     Comment.create(post: post1, user: user1, text: 'nice!')
   end
 
-  describe 'show correct posts for user1' do
+  describe 'show correct post for user1' do
     before(:example) do
-      visit user_posts_path(user1, post1)
+      visit user_post_path(user1, post1)
     end
 
     it 'displays the post title' do

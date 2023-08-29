@@ -71,9 +71,8 @@ RSpec.describe 'post index view page', type: :system do
 
     it 'redirects to the post show page when a post is clicked' do
       click_link post1.title
-      expect(user_post_path(user1, post1)).to eq(user_posts_path(user1, post1))
+      expect(page).to have_current_path(user_post_path(user1, post1))
       expect(page).to have_content(post1.title)
-      # Add more expectations for the post show page if needed
     end
 
     it 'displays a section for pagination if there are more posts' do

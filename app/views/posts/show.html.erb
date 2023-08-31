@@ -3,11 +3,6 @@
 <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 <body>
-<% flash.each do |key, value| %>
-  <div class="flash <%= key %>">
-    <%= value %>
-  </div>
-<% end %>
 <nav class="nav">
     <%= link_to "Home", root_path %>
     <%= link_to "Back", :back %>

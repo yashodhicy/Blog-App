@@ -1,4 +1,6 @@
 <%= stylesheet_link_tag 'post', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'user', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 <div id="post">
 post #<%= post.id %><br>
   <%= post.text %><br>
@@ -10,6 +12,6 @@ Likes: <%= post.likes_counter? ? post.likes_counter : 0 %>
   <%= link_to "Delete Post", user_post_path(current_user, post), method: :delete, data: {
                     turbo_method: :delete,
                       turbo_confirm: "Are you sure?"
-                    } %>
+                    }, class: "delete-post-link" %>
 <%end%>
 </div>

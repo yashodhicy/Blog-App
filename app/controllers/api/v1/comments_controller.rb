@@ -1,5 +1,5 @@
 class Api::V1::CommentsController < ApplicationController
-    before_action :find_post
+  before_action :find_post
 
   def index
     @comments = @post.comments
@@ -9,7 +9,7 @@ class Api::V1::CommentsController < ApplicationController
   def create
     @current = current_user
     @comment = @post.comments.build(text: comment_params[:text], user_id: @current.id)
-    
+
 
     if @comment.save
       render json: @comment, status: :created

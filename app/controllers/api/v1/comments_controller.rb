@@ -10,7 +10,6 @@ class Api::V1::CommentsController < ApplicationController
     @current = current_user
     @comment = @post.comments.build(text: comment_params[:text], user_id: @current.id)
 
-
     if @comment.save
       render json: @comment, status: :created
     else

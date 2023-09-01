@@ -1,6 +1,15 @@
 class ApplicationController < ActionController::Base
+  before_action :authenticate_user!
   protect_from_forgery with: :exception
   before_action :update_allowed_parameters, if: :devise_controller?
+
+  before_action :load_user_abilities
+
+  private
+
+  def load_user_abilities
+    @load_user_abilities ||= Ability.new(current_user)
+  end
 
   protected
 
@@ -10,15 +19,4 @@ class ApplicationController < ActionController::Base
       u.permit(:name, :photo, :bio, :posts_counter, :email, :password, :current_password)
     end
   end
-
-  # private
-
-  # def after_sign_out_path_for(resource_or_scope)
-  #   new_user_session_path
-  # end
-
-  # def after_sign_in_path_for(resource)
-  #   # Customize the path you want to redirect to after successful sign-in
-  #   users_path
-  # end
 end

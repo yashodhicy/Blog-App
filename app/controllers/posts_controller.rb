@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments).paginate(page: params[:page], per_page: 2)
@@ -30,6 +29,13 @@ class PostsController < ApplicationController
         end
       end
     end
+  end
+
+  def destroy
+    @user = current_user
+    @post = Post.find(params[:id]) # Fetch the post to be destroyed
+    @post.destroy
+    redirect_to user_posts_path(@user), notice: 'Post was successfully deleted.'
   end
 
   private

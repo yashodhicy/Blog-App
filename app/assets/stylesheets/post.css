@@ -4,6 +4,10 @@
   margin-top: 2rem;
 }
 
+#post {
+  padding: 10px 10px;
+}
+
 #comments-likes {
   text-align: end;
   padding-right: 1rem;
@@ -40,4 +44,12 @@ form {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+}
+
+.delete-post-link {
+  background-color: var(--light_purple);
+  min-height: 2rem;
+  border: 0.2rem solid var(--purple);
+  border-radius: 5px;
+  padding: 4px 6px;
 }

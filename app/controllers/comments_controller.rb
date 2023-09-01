@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
   def new
     @comment = Comment.new
   end
@@ -17,6 +16,12 @@ class CommentsController < ApplicationController
         end
       end
     end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to post_path(@comment.post), notice: 'Comment was successfully deleted.'
   end
 
   private

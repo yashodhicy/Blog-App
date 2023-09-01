@@ -18,7 +18,7 @@ RSpec.describe 'Api::V1::Posts', type: :request do
       response_body.each_with_index do |post_data, index|
         expect(post_data['id']).to eq(posts[index].id)
         expect(post_data['title']).to eq(posts[index].title)
-        expect(post_data['content']).to eq(posts[index].content)
+        expect(post_data['text']).to eq(posts[index].content)
       end
     end
   end

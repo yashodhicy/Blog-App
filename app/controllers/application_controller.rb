@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   private
 
   def load_user_abilities
-    @current_ability ||= Ability.new(current_user)
+    @load_user_abilities ||= Ability.new(current_user)
   end
 
   protected
@@ -19,5 +19,4 @@ class ApplicationController < ActionController::Base
       u.permit(:name, :photo, :bio, :posts_counter, :email, :password, :current_password)
     end
   end
-
 end
